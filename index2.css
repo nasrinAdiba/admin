@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    background-image: url("technology-785742_1280-pixabay-technology-computer-1.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+}
+
+.name {
+    color: white;
+    text-align: left;
+    padding-top: 300px;
+    font-family: 'Roboto Slab', serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.nav-link {
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+}
+
+.nav-link li {
+    list-style: none;
+}
+
+.nav-link li a {
+    text-decoration: none;
+    color: white;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-link {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 724px) {
+    body {
+        overflow: scroll;
+    }
+    .nav-link {
+        position: absolute;
+        right: 0px;
+        height: 60vh;
+        top: 8vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        background-color: #1F1D36;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .name {
+        padding-right: 100px;
+    }
+    .nav-link li {
+        opacity: 1;
+    }
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+#about {
+    background-color: #CBD1D2;
+    height: 400px;
+}
+
+#about h2 {
+    text-align: center;
+}
+
+.box {
+    position: absolute;
+    margin-top: 60px;
+}
+
+.box1 {
+    padding-left: 100px;
+    z-index: 1;
+    margin-left: 100px;
+}
+
+.box2 {
+    margin-left: 350px;
+    padding-top: 60px;
+    z-index: 2;
+}
+
+.para {
+    margin-top: 100px;
+    margin-right: 300px;
+    width: 300px;
+    height: 300px;
+    float: right;
+}
+
+.para h2 {
+    padding: 20px 20px;
+}
+
+#portfolio {
+    background-color: #F3F5F8;
+    height: 420px;
+    align-content: center;
+}
+
+.flashcard h2 {
+    margin: 10px;
+}
+
+.flashcard {
+    position: inherit;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+
+#pro1 {
+    text-align: center;
+}
+
+.window {
+    display: flex;
+    position: absolute;
+    width: 350px;
+    height: 280px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    z-index: 2;
+    top: 150%;
+    left: 60%;
+}
+
+.open-window {
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    position: relative;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.open-window:hover {
+    opacity: o.6;
+}
+
+.close-window {
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    position: relative;
+    padding: 10px 20px;
+    margin: 15px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.popup-content {
+    width: 350px;
+    height: 280px;
+    margin: 10px;
+    ;
+    padding: 20px;
+    background: white;
+    text-align: center;
+    position: relative;
+    animation: windowsani 0.4s;
+}
+
+@keyframes windowsani {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.popup-content p {
+    padding: 10px;
+}
+
+#contacts {
+    text-align: center;
+}
+
+#contacts h2 {
+    padding: 20px;
+}
+
+#contacts p {
+    padding-bottom: 20px;
+}
+
+#footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #1E1010;
+    color: white;
+}
